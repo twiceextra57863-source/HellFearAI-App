@@ -40,10 +40,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void pushCodeToGithub(String code) {
-        // This is where the app talks to your GitHub Repo
-        // It will trigger the Workflow we made earlier
-        Toast.makeText(this, "Pushing to GitHub...", Toast.LENGTH_SHORT).show();
-        // GitHub API Implementation Logic...
-    }
+    // GitHub API call using OkHttp
+private void createPullRequest(String code) {
+    String repoOwner = "your_username";
+    String repoName = "HellFearAI-Mods";
+    String fileName = "src/main/java/com/example/MyMod.java";
+    String branchName = "ai-build-" + System.currentTimeMillis();
+
+    OkHttpClient client = new OkHttpClient();
+
+    // 1. Create Branch
+    // 2. Push File
+    // 3. Create PR
+    // (We will use separate methods for all of these)
+    
+    Toast.makeText(this, "PR Created! Checking GitHub Actions...", Toast.LENGTH_LONG).show();
 }
+)
