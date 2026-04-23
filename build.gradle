@@ -1,28 +1,18 @@
-plugins {
-    id 'com.android.application'
-}
-
-android {
-    namespace 'com.hellfear.ai'
-    compileSdk 34
-
-    defaultConfig {
-        applicationId "com.hellfear.ai"
-        minSdk 24
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
+    dependencies {
+        // Java 21 support ke liye AGP 8.2.0+ zaroori hai
+        classpath 'com.android.tools.build:gradle:8.2.0'
     }
 }
 
-dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.11.0'
-    implementation 'com.squareup.okhttp3:okhttp:4.12.0' // For GitHub API
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
 
