@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- AI Selection Tabs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btn_chatgpt" android:layout_width="0dp" android:layout_weight="1" android:text="GPT" />
+        <Button android:id="@+id/btn_gemini" android:layout_width="0dp" android:layout_weight="1" android:text="Gemini" />
+        <Button android:id="@+id/btn_deepseek" android:layout_width="0dp" android:layout_weight="1" android:text="DeepSeek" />
+    </LinearLayout>
+
+    <!-- WebView to show AI websites -->
+    <WebView
+        android:id="@+id/ai_webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <!-- Prompt/Code Area -->
+    <EditText
+        android:id="@+id/code_input"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="Paste AI code here..."
+        android:gravity="top"
+        android:background="#f0f0f0"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btn_compile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compile & Create Pull Request"
+        android:backgroundTint="#FF0000" />
+</LinearLayout>
